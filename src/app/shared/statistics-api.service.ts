@@ -24,7 +24,7 @@ export class StatisticsApiService {
 
     getStats() {
         let body = null;
-        return this.http.get("https://restcountries.eu/rest/v2/all", this.getHeaders())
+        return this.http.get("https://fantasy.premierleague.com/drf/bootstrap-static", this.getHeaders())
             .map((response: Response) => {
                 return response.json();
             });
