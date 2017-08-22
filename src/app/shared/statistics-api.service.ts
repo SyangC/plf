@@ -17,9 +17,11 @@ export class StatisticsApiService {
 
     getHeaders() {
         let headers = new Headers();
+        headers.append("Content-Type", 'application/json');
         headers.append("Accept", "application/json");
+        headers.append("Access-Control-Allow-Credentials", "true");
 
-        return new RequestOptions({ headers: headers });
+        return new RequestOptions({ headers: headers, withCredentials: true });
     }
 
     getStats() {
